@@ -18,7 +18,7 @@ const chanel = {
         console.log('Hello, this works with objects');
     }
 
-}
+};
 
 chanel.stockPrice = 1642.00;
 
@@ -31,3 +31,40 @@ console.log(chanel.products.bag);
 console.log(chanel['products']['bag']);
 
 chanel.print();
+
+// function printFriends(array) {
+//     array.forEach(friend => {
+//         console.log(friend);
+//     });
+// }
+
+// function printName(element) {
+//     console.log(element);
+// }
+
+//another example
+// friends.forEach(function (friend){
+//     printName(friend);
+// });
+
+// friends.forEach(friend =>
+//     printName.apply(friends));
+
+printFriends(friends);
+printFriends(chanel.foundingMembers);
+
+//standand function
+function addNumbers(num1, num2) {
+    return num1 + num2;
+};
+
+//function expression
+const multiplyNumbers = function(num1,num2) {
+    return num1 * num2;
+};
+
+//arrow function
+const  subtractNumbers = (num1, num2) => {
+    return num1 - num2;
+};
+
