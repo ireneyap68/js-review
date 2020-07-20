@@ -46,3 +46,45 @@ This is my review of JavaScript
 
 ```
 
+## DOM Manipulation
+```javascript
+    //DOM
+    const container = document.querySelector('.container');
+    console.log(container);
+
+    // create an element
+    const headerTwo = document.createElement('h2');
+    headerTwo.textContent = 'My First JS Review';
+
+
+    container.appendChild(headerTwo);
+
+    // add a class to headerTwo
+    headerTwo.classList.add('subtitle', 'headerTwo');
+    // headerTwo.setAttribute('class', 'header-two');
+    headerTwo.classList.remove('headerTwo');
+    console.log(headerTwo)
+
+```
+## More DOM Manipulation
+```javascript
+    const list = document.createElement('ul');
+    for (let i =0; i < friends.length; i++) {
+        let eachFriend = friends[i];
+
+        //create an element
+        const listItem = document.createElement('li');
+        // add text to the element
+        listItem.textContent = eachFriend;
+        // append list items
+        list.appendChild(listItem);
+    }
+
+    console.log(list);
+
+    // add event listener
+    headerThree.addEventListener('click', function() {
+        container.appendChild(list);
+    });
+```
+

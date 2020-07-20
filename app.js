@@ -32,11 +32,11 @@ console.log(chanel['products']['bag']);
 
 chanel.print();
 
-// function printFriends(array) {
-//     array.forEach(friend => {
-//         console.log(friend);
-//     });
-// }
+function printFriends(array) {
+    array.forEach(friend => {
+        console.log(friend);
+    });
+}
 
 // function printName(element) {
 //     console.log(element);
@@ -67,4 +67,59 @@ const multiplyNumbers = function(num1,num2) {
 const  subtractNumbers = (num1, num2) => {
     return num1 - num2;
 };
+
+//DOM
+const container = document.querySelector('.container');
+console.log(container);
+
+// create an element
+const headerTwo = document.createElement('h2');
+headerTwo.textContent = 'My First JS Review';
+
+
+container.appendChild(headerTwo);
+
+// add a class to headerTwo
+headerTwo.classList.add('subtitle', 'headerTwo');
+// headerTwo.setAttribute('class', 'header-two');
+
+//remove a class from headerTwo
+headerTwo.classList.remove('header-two');
+console.log(headerTwo)
+
+//
+headerTwo.addEventListener('click', function(){
+    headerTwo.textContent = 'Irene';
+
+});
+
+//make another elemner
+const headerThree = document.createElement('h2');
+headerThree.textContent = 'Friends';
+
+container.appendChild(headerThree);
+
+console.log(headerThree);
+
+// iterate through my friends array
+// reference each friend
+// create a li
+// add textContent to the li
+// append that to a ul (unordered list)
+
+const list = document.createElement('ul');
+for (let i =0; i < friends.length; i++) {
+    let eachFriend = friends[i];
+
+    const listItem = document.createElement('li');
+    listItem.textContent = eachFriend;
+
+    list.appendChild(listItem);
+}
+
+console.log(list);
+
+headerThree.addEventListener('click', function() {
+    container.appendChild(list);
+});
 
