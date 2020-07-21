@@ -158,7 +158,7 @@ function wordYeller(sentence) {
 // => [true, false, false, true]
 
 function arraySubstring(words, str){
-    let array = []
+    let array = [];
     for (let i = 0; i < words.length; i++){
         let word = words[i]
         if (word.search(str) !== -1){
