@@ -30,10 +30,16 @@ console.log(isInside(['pete', 'adam', 'taylor'], 'fred'));
 // reverseStr('General Assembly'); //=> 'ylbmessA lareneG'
 
 function reverseStr(str) {
-    return (str.split('').reverse().join(''));
+    let splitString = str.split(''); //split each char
+    let reverseString = splitString.reverse(); //reverse all char with individual
+    let joinString = reverseString.join('');
+    console.log(joinString)
+    
+    //return (str.split('').reverse().join(''));
 }
 console.log(reverseStr('testing'));
 console.log(reverseStr('bootcamp'));
+
 
 
 // ### luckySevens
@@ -94,7 +100,13 @@ function copyMachine(element, num) {
 function everyOtherWord(sentence){
     const everyOtherWord = [];
     const sentenceSplit = sentence.split(' ');
-    return sentenceSplit;
+
+    for (let i=0; i < sentenceSplit.length; i++) {
+      if( i % 2=== 0){
+        everyOtherWord.push(sentenceSplit[i]);
+      }
+    }
+    return everyOtherWord;
     }
     
   
